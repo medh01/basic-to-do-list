@@ -11,6 +11,13 @@ body{
     
 }
 
+@media screen and (max-width: 380px){
+    body{
+        margin: 50px 5vw;
+    }
+    
+}
+
 .input{
     background-color: #FFF;
     padding: 20px;
@@ -19,6 +26,12 @@ body{
     display: flex;
     gap: 10px;
     justify-content: center;
+}
+
+@media screen and (max-width: 400px){
+    .input{
+        flex-direction: column;
+    }
 }
 
 input{
@@ -42,18 +55,30 @@ ul{
     box-shadow: 0 0 10px rgba(0,0,0,0.4);
     margin-top: 20px;
     list-style-type: none;
+ 
+
 }
 
-.done, .delete{
+.done , .delete{
     background-color: #e74c3c;
     color: #FFF;
     border: none;
     padding: 5px;
-    margin: 0 5px;
+    cursor: pointer;
+    vertical-align: middle;
+    
 }
 
 li{
-    display: flex;
-    justify-content: space-between;
+    display: grid;
+    grid-template-columns: 1fr auto auto;
+    grid-template-rows: auto;
+    grid-gap: 5px;
     margin-top: 5px;
 }
+
+p{
+    word-wrap:break-word;
+}
+
+
